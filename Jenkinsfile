@@ -1,0 +1,6 @@
+#! groovy
+
+node {
+  stage("checkout") {
+    
+    
