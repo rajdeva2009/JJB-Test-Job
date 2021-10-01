@@ -8,6 +8,6 @@ node('') {
   stage('data') {
     sh "cp -R jobs /etc/jenkins_jobs"
     sh "cd /etc/jenkins_jobs"
-    sh "jenkins-jobs update update jobs"
+    sh "jenkins-jobs update jobs"
   }
 }
