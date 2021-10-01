@@ -1,13 +1,15 @@
 #! groovy
 
 node('') {
-  echo "GitHub BranhName ${env.BRANCH_NAME}"
+  sh "echo GitHub BranhName ${env.BRANCH_NAME}"
+  def WORKSPACE = "/etc/jenkins_jobs"
   
   stage('checkout') {
-    git branch: 'master',url: '   '
+    sh "cd ${WORKSPACE}"
+    git branch: 'master',url: 'https://github.com/rajdeva2009/JJB-Test-Job.git'
   }
   
   stage('data') {
-    sh "echo ${WORKSPACE}"
+    sh "cd ${WORKSPACE};ls -ltr"
   }
 }

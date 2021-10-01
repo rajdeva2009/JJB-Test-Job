@@ -1,0 +1,15 @@
+- job-template:
+    name: '{name}_job'
+    description: first_test_job
+    project-type: pipeline
+    sandbox: true
+    pipeline-scm:
+      scm:
+        - git:
+            url: 'https://github.com/rajdeva2009/{name}_job.git'
+            branches: 
+              - '*/master'
+      script-path: Jenkinsfile
+      lightweight-checkout: true
+    #    builders:
+    #        - shell: '{command}'

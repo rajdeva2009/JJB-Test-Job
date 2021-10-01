@@ -1,0 +1,8 @@
+- project:
+        name: project-example
+        jobs:
+           - '{name}_job':
+                 name: first
+           - '{name}_job': 
+                 name: second
+                 command: ls /etc
